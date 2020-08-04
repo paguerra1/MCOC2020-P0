@@ -1,7 +1,7 @@
 # MCOC2020-P0
 # Entrega 1: Mi computador
 
-* Marca/modelo: ideapad 330S-14IKB
+* Marca/modelo: Lenovo ideapad 330S-14IKB
 * Tipo: Notebook
 * Año Adquisición: 2019
 * Procesador:

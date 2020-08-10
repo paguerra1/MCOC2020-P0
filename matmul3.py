@@ -19,7 +19,7 @@ t1 = perf_counter()
 print(f"A = \n{A}")
 print(f"B = \n{B}")
 
-C = A*B     
+C = A@B     
 t2 = perf_counter()
 print(f"C = \n{C}")
 print(f"C00 = \n{C[0,0]}")
@@ -42,7 +42,7 @@ t3 = perf_counter()
 print(f"A2 = \n{A2}")
 print(f"B2 = \n{B2}")
 
-C2 = A2*B2     
+C2 = A2@B2     
 t4 = perf_counter()
 print(f"C2 = \n{C}")
 print(f"C200 = \n{C[0,0]}")
@@ -65,7 +65,7 @@ t5 = perf_counter()
 print(f"A3 = \n{A3}")
 print(f"B3 = \n{B3}")
 
-C3 = A3*B3   
+C3 = A3@B3   
 t6 = perf_counter()
 print(f"C3 = \n{C}")
 print(f"C300 = \n{C[0,0]}")

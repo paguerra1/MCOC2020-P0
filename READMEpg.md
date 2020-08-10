@@ -40,6 +40,8 @@
 
 
 * DESEMPEÑO MATMUL
+![Rendimiendo A@B](https://user-images.githubusercontent.com/69210578/89821774-233dab00-db1d-11ea-9b87-2afa7bd84ce5.png)
+
    * ¿Como difiere del gráfico del profesor?      Difiere bastante en el tiempo de ejecución de cada corrida y levemente en la memoria utilizada.
    * ¿ A que se pueden deber estas diferencias?     Porque cada procesador tiene un distinto intervalo de tiempo en el que un programa se ejecuta en el sistema opertivo. Los rendimientos difieren y por ende un computador tardará mas que otro en ejecutar el código. En este caso el gráfico del profesor muestra que es mas rápido el proceso de ejecución.
    * Tiempo transcurrido no es lineal ¿porque?       De forma automática cada vez que se ejecuta el código se vuelve a realizar todo nuevamente, desde el inicio, tardando una cantidad de tiempo diferente en cada iteración variando en en pocos segundos, con esto el gráfico no se mostrará de forma lineal.

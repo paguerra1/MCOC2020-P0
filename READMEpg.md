@@ -39,12 +39,29 @@
 * Proveedor internet: VTR Banda Ancha S.A.
 
 
-* DESEMPEÑO MATMUL
-![Rendimiendo A@B](https://user-images.githubusercontent.com/69210578/89821774-233dab00-db1d-11ea-9b87-2afa7bd84ce5.png)
+* DESEMPEÑO MATMUL:
+![rendimiento matmul](https://user-images.githubusercontent.com/69210578/89847750-be04ac80-db52-11ea-949c-1719dc1c13c1.png)
 
-   * ¿Como difiere del gráfico del profesor?      Difiere bastante en el tiempo de ejecución de cada corrida y levemente en la memoria utilizada.
-   * ¿ A que se pueden deber estas diferencias?     Porque cada procesador tiene un distinto intervalo de tiempo en el que un programa se ejecuta en el sistema opertivo. Los rendimientos difieren y por ende un computador tardará mas que otro en ejecutar el código. En este caso el gráfico del profesor muestra que es mas rápido el proceso de ejecución.
-   * Tiempo transcurrido no es lineal ¿porque?       De forma automática cada vez que se ejecuta el código se vuelve a realizar todo nuevamente, desde el inicio, tardando una cantidad de tiempo diferente en cada iteración variando en en pocos segundos, con esto el gráfico no se mostrará de forma lineal.
+
+   * ¿Como difiere del gráfico del profesor?  -    Difiere bastante en el tiempo de ejecución de cada corrida, se observa que el el gráfico del profesor que para las matrices mas grandes se demora menos de 1 min, mientras que en mi gráfico se observa que se demora 1 minuno y en algunos casos mas de esto. Con respecto a las matrices mas pequeñas se nota una clara diferencia, donde la del profesor tiene una máxima duración de 0,1 ms mientras que mi gráfico demora entre 0,1 ms y 1 s para estos casos. Con respecto a la memoria, los graficos son similares.
+   
+   * ¿ A que se pueden deber estas diferencias?   -  A que cada procesador tiene un distinto intervalo de tiempo en el que un programa se ejecuta en el sistema opertivo. El procesador utilizado por el procesador es muy bueno, además de tener 32 GM de memoria RAM. Los rendimientos difieren y por ende mi computador tardará mas tiempo en ejecutar el código. 
+   
+   
+   * El gráfico de memoria es lineal, pero el del tiempo transcurrido no ¿porque?    -   De forma automática cada vez que se ejecuta el código se vuelve a realizar todo nuevamente, desde el inicio, tardando una cantidad de tiempo diferente en cada iteración variando en en pocos segundos producto de los diversos programas que se utilicen en el mismo periodo de tiempo de ejecución del código. Mientras que el gráfico de memoria es lineal, mientras mas grande sea la matris mas bytes usará en la ejecución del programa, son directamente proporcionales. 
    * Nympy: 1.18.5
    * Versión Python: 3.8
    * Se utiliza solo un procesador. 
+
+
+
+* DESEMPEÑO MIMATMUL:
+
+
+
+
+
+![Captura de pantalla (582)](https://user-images.githubusercontent.com/69210578/89848029-80545380-db53-11ea-9195-f58466b05d5c.png)
+
+
+

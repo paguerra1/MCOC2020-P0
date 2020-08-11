@@ -2,8 +2,11 @@
 # Entrega 1: Mi computador
 
 * Marca/modelo: Lenovo ideapad 330S-14IKB
+
 * Tipo: Notebook
+
 * Año Adquisición: 2019
+
 * Procesador:
   * Marca/Modelo: Intel Core i5-8250U CPU
   * Velocidad Base: 1.6 GHz
@@ -12,19 +15,23 @@
   * Humero de hilos: 2
   * Arquitectura: x64
   * Set de instrucciones: Intel® SSE4.1, Intel® SSE4.2, Intel® AVX2
+  
 * Tamaño de las cachés del procesador
   * L1: 256 KB
   * L2: 1 MB
   * L3: 6 MB
+  
 * Memoria 
   * Total: 4 GB
   * Tipo de memoria:DDR4-2400
   * Velocidad: 2400 MHz
   * Numero de (SO)DIMM: 2
+  
 * Tarjeta Gráfica
   * Marca / Modelo: Intel (R) UHD Graphics 620
   * Memoria dedicada: 1 GB
   * Resolución: 1920 x 1080 x 60 hercios
+  
 * Disco 1: 
   * Marca: Intel Optane
   * Tipo: HDD
@@ -51,7 +58,9 @@
    * El gráfico de memoria es lineal, pero el del tiempo transcurrido no ¿porque?    -   De forma automática cada vez que se ejecuta el código se vuelve a realizar todo nuevamente, desde el inicio, tardando una cantidad de tiempo diferente en cada iteración variando en en pocos segundos producto de los diversos programas que se utilicen en el mismo periodo de tiempo de ejecución del código. Mientras que el gráfico de memoria es lineal, mientras mas grande sea la matris mas bytes usará en la ejecución del programa, son directamente proporcionales. 
    * Nympy: 1.18.5
    * Versión Python: 3.8
-   * Se utiliza solo un procesador. 
+   * Se utiliza solo un procesador.  
+![Captura de pantalla (584)](https://user-images.githubusercontent.com/69210578/89850744-ed1e1c80-db58-11ea-916e-0aac0007c080.png)
+
 
 
 

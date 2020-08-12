@@ -46,7 +46,7 @@
 * Proveedor internet: VTR Banda Ancha S.A.
 
 
-* DESEMPEÑO MATMUL:
+# DESEMPEÑO MATMUL:
    * ![rendimiento matmul](https://user-images.githubusercontent.com/69210578/89847750-be04ac80-db52-11ea-949c-1719dc1c13c1.png)
 
 
@@ -64,7 +64,7 @@
 
 
 
-* DESEMPEÑO MIMATMUL: 
+# DESEMPEÑO MIMATMUL: 
 (Solo se realizó hasta 500 por que tardó mucho tiempo: 1 hora y media aprox)
 
    * ![rendimiento mimatmul](https://user-images.githubusercontent.com/69210578/89849014-9cf18b00-db55-11ea-8e90-c4f5cc27750b.png)
@@ -75,6 +75,25 @@
    * Imagen procesador: ![Captura de pantalla (582)](https://user-images.githubusercontent.com/69210578/89848029-80545380-db53-11ea-9195-f58466b05d5c.png)
 
 
-* DESEMPEÑO DE INVERSA:
+# DESEMPEÑO DE INVERSA:
 
-   # HOLA
+   # Caso 1: Numpy.Linalg.inv
+   
+   ![desempeño caso 1- single](https://user-images.githubusercontent.com/69210578/90073961-317bfa80-dcc8-11ea-9d6b-0380ae62115b.png)
+   ![desempeño caso 1-double](https://user-images.githubusercontent.com/69210578/90073968-350f8180-dcc8-11ea-9116-8e4d789ea70f.png)
+
+   
+   
+   
+   # Caso 2: Scipy.linalg.inv 
+   ![desempeño caso 2-single](https://user-images.githubusercontent.com/69210578/90074163-a0595380-dcc8-11ea-9579-c7ae655576ea.png)
+   ![desempeño caso2-double](https://user-images.githubusercontent.com/69210578/90074166-a3ecda80-dcc8-11ea-8ac4-9373405a07d3.png)
+   ![desempeño caso2-half](https://user-images.githubusercontent.com/69210578/90074173-a64f3480-dcc8-11ea-927e-4ca46b001ba5.png)
+   ![desempeño caso 2- longdouble](https://user-images.githubusercontent.com/69210578/90074228-c252d600-dcc8-11ea-8e37-3ddebbc342cd.png)
+
+   # Caso 3: Scipy.linalg.inv usando overwrite=True
+   
+   
+   * ¿Qué algoritmo de inversión cree que utiliza cada método? - Se utiliza el algoritmo de Matriz Laplaciana, este es un algotires un algoritmo con complejidad factorial, lo cual hace que resolver el sistema mediante este método no sea la mejor opción, debido a su demora.
+   
+   * ¿Cómo incide el paralelismo y la estructura de caché de su procesador en el desempeño de cada caso?

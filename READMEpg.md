@@ -92,7 +92,11 @@
    ![desempeño caso 2- longdouble](https://user-images.githubusercontent.com/69210578/90074228-c252d600-dcc8-11ea-8e37-3ddebbc342cd.png)
 
    # Caso 3: Scipy.linalg.inv usando overwrite=True
-   
+   ![desempeño caso 3- half](https://user-images.githubusercontent.com/69210578/90074293-e31b2b80-dcc8-11ea-84f1-f60c1e834f1a.png)
+   ![desempeño caso 3- longdouble](https://user-images.githubusercontent.com/69210578/90074300-e7474900-dcc8-11ea-8092-fffb55c34215.png)
+   ![desempeño caso 3-double](https://user-images.githubusercontent.com/69210578/90074314-ea423980-dcc8-11ea-9ebf-5c1468cb402f.png)
+   ![desempeño caso 3-single](https://user-images.githubusercontent.com/69210578/90074319-ed3d2a00-dcc8-11ea-8b8f-091dd2c438a8.png)
+
    
    * ¿Qué algoritmo de inversión cree que utiliza cada método? - Se utiliza el algoritmo de Matriz Laplaciana, este es un algotires un algoritmo con complejidad factorial, lo cual hace que resolver el sistema mediante este método no sea la mejor opción, debido a su demora.
    

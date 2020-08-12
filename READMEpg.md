@@ -75,4 +75,6 @@
    * Imagen procesador: ![Captura de pantalla (582)](https://user-images.githubusercontent.com/69210578/89848029-80545380-db53-11ea-9195-f58466b05d5c.png)
 
 
+* DESEMPEÑO DE INVERSA:
 
+   # HOLA

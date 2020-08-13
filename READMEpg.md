@@ -77,17 +77,24 @@
 
 # DESEMPEÑO DE INVERSA:
    * Tomando en cuenta que para los tres casos generales, evaluando de igual forma que las entregas anteriores, se llegó hasta la matriz 10.000X10.000 considerando la inversa de solo una matriz "A", pero para los gráficos específicos de cada tipo se corrió el programa hasta la matriz de  5.000X5.000, considerando dos matrices "A" y "B".
+   * La información obtenida de cada tipo de dato se encuentra a continuación, donde para "np.double" y "np.longdouble" se considera la misma cantidad de memoria, ambos tipo float64
+   ![Captura de pantalla (586)](https://user-images.githubusercontent.com/69210578/90087984-fab7db80-dceb-11ea-962d-ff5c83c2d131.png)
+   ![Captura de pantalla (587)](https://user-images.githubusercontent.com/69210578/90087988-fc819f00-dceb-11ea-8e40-1196144ccf94.png)
+
    
   # Caso 1: Numpy.Linalg.inv
-   * Para este caso el procesador trabajó a un 50% aprox, el nivel de uso de la CPU fue 59% aprox, El gráfico se presenta a continuación:
-   * ![caso 1](https://user-images.githubusercontent.com/69210578/90085603-5da67400-dce6-11ea-8f3d-51fb9ff215b4.png)
+   
    
    * Gráfico desempeño para caso 1, utilizando las matrices random:
    
+   ![desempeño general caso 1](https://user-images.githubusercontent.com/69210578/90087455-cd1e6280-dcea-11ea-9226-d5a0dac57296.png)
+   
+   * Para este caso, no se logró ejecutar "np.half" ni "np.longdouble". El procesador trabajó a un 50% aprox, el nivel de uso de la CPU fue 59% aprox, El gráfico se presenta a continuación:
+   * ![caso 1](https://user-images.githubusercontent.com/69210578/90085603-5da67400-dce6-11ea-8f3d-51fb9ff215b4.png)
+
    
    
-   
-   
+   * Para las matrices mas pequeñas el tipo de dato "np.double" tardó mas, y ambos con un tiempo de 10 segundos para las matrices de 5.000x5.000, usando 1GB de memoria. "np.single" tiene dos peaks de tiempo para las matrices de 10x10 y 20x20
    
    ![desempeño caso 1- single](https://user-images.githubusercontent.com/69210578/90073961-317bfa80-dcc8-11ea-9d6b-0380ae62115b.png)
    ![desempeño caso 1-double](https://user-images.githubusercontent.com/69210578/90073968-350f8180-dcc8-11ea-9116-8e4d789ea70f.png)
@@ -96,14 +103,16 @@
    
    
   # Caso 2: Scipy.linalg.inv 
-  
+   * Gráfico desempeño para caso 3, utilizando las matrices random:
+   
+   ![desempeño general caso 2](https://user-images.githubusercontent.com/69210578/90087451-c8f24500-dcea-11ea-9f3b-f71273108f89.png)
+   
    * Este resultó mas rápido que el caso 1. El prosesador trabajó a un 74% aproximadamente, el nivel de uso de la CPU fue de 50% aprox. El gráfico se presenta a continuación:
    * ![caso 2](https://user-images.githubusercontent.com/69210578/90085612-626b2800-dce6-11ea-9117-6af6f00708b9.png)
   
-  
-   * Gráfico desempeño para caso 3, utilizando las matrices random:
    
    *  Con respecto a cada tipo de dato, el que demoró mas tiempo fue "np.longdouble" para matrices mas grandes de 5.000x5.000, "np.single" presenta una corrida que llama la atencion provocada posiblemente por los programas que corrian de forma paralela a python. "np.half" presenta menor tiempo para todas los tamaños de matrices.
+   
    ![desempeño caso 2-single](https://user-images.githubusercontent.com/69210578/90074163-a0595380-dcc8-11ea-9579-c7ae655576ea.png)
    ![desempeño caso2-double](https://user-images.githubusercontent.com/69210578/90074166-a3ecda80-dcc8-11ea-8ac4-9373405a07d3.png)
    ![desempeño caso2-half](https://user-images.githubusercontent.com/69210578/90074173-a64f3480-dcc8-11ea-927e-4ca46b001ba5.png)
@@ -111,14 +120,14 @@
 
   # Caso 3: Scipy.linalg.inv usando overwrite=True
    
+    
+   * Gráfico desempeño para caso 3, utilizando las matrices random:
+   
+   ![desempeño general caso 3](https://user-images.githubusercontent.com/69210578/90087453-cabc0880-dcea-11ea-9e49-fc29dc2cee8b.png)
+   
    * Para este caso, overwrite=True demostró resultar una ganancia en cuanto a desempeño, superior a los dos casos anteriores. La carga del Disco osciló entre 80% y 90% llegando al peak de 100% por un tiempo prolongado. El nivel de uso de la CPU fue de aproximadamente 30%. El gráfico se presenta a continuación:
    
    * ![caso 3](https://user-images.githubusercontent.com/69210578/90085618-65feaf00-dce6-11ea-808b-29368ee51a31.png)
-
-   
-   * Gráfico desempeño para caso 3, utilizando las matrices random:
-   
-   
    
    * Ahora con respecto a cada tipo de dato, el que demoró mas tiempo fue "np.longdouble" con 10 segundos para las matrices de 5.000x5.0000, seguido del tipo "np.double" . El tipo "np.half" fue el tipo de xxxx que mas demoró en el inicio, tardando casi 0.1 s para matrices mas pequeñas de 2x2.
    En el caso de "np.longdouble", se ve un peak que llama la atención en las matrices de 40x40, esto se puede deber a los programas que estaban corriendo simultaneamente a pyhton.

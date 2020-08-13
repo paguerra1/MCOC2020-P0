@@ -77,7 +77,8 @@
 
 # DESEMPEÑO DE INVERSA:
    * Tomando en cuenta que para los tres casos generales, evaluando de igual forma que las entregas anteriores, se llegó hasta la matriz 10.000X10.000 considerando la inversa de solo una matriz "A", pero para los gráficos específicos de cada tipo se corrió el programa hasta la matriz de  5.000X5.000, considerando dos matrices "A" y "B".
-   * La información obtenida de cada tipo de dato se encuentra a continuación, donde para "np.double" y "np.longdouble" se considera la misma cantidad de memoria, ambos tipo float64
+   * La información obtenida de cada tipo de dato se encuentra a continuación, donde para "np.double" y "np.longdouble" se considera la misma cantidad de memoria, ambos de tipo float64
+   *
    ![Captura de pantalla (586)](https://user-images.githubusercontent.com/69210578/90087984-fab7db80-dceb-11ea-962d-ff5c83c2d131.png)
    ![Captura de pantalla (587)](https://user-images.githubusercontent.com/69210578/90087988-fc819f00-dceb-11ea-8e40-1196144ccf94.png)
 
@@ -86,7 +87,7 @@
    
    
    * Gráfico desempeño para caso 1, utilizando las matrices random:
-   
+   *
    ![desempeño general caso 1](https://user-images.githubusercontent.com/69210578/90087455-cd1e6280-dcea-11ea-9226-d5a0dac57296.png)
    
    * Para este caso, no se logró ejecutar "np.half" ni "np.longdouble". El procesador trabajó a un 50% aprox, el nivel de uso de la CPU fue 59% aprox, El gráfico se presenta a continuación:
@@ -110,7 +111,7 @@
    * ![caso 2](https://user-images.githubusercontent.com/69210578/90088567-3b642480-dced-11ea-931a-d68348ba3be1.png)
    
    *  Con respecto a cada tipo de dato, el que demoró mas tiempo fue "np.longdouble" para matrices mas grandes de 5.000x5.000, "np.single" presenta una corrida que llama la atencion provocada posiblemente por los programas que corrian de forma paralela a python. "np.half" presenta menor tiempo para todas los tamaños de matrices.
-   
+   *
    ![desempeño caso 2-single](https://user-images.githubusercontent.com/69210578/90074163-a0595380-dcc8-11ea-9579-c7ae655576ea.png)
    ![desempeño caso2-double](https://user-images.githubusercontent.com/69210578/90074166-a3ecda80-dcc8-11ea-8ac4-9373405a07d3.png)
    ![desempeño caso2-half](https://user-images.githubusercontent.com/69210578/90074173-a64f3480-dcc8-11ea-927e-4ca46b001ba5.png)
@@ -129,6 +130,8 @@
    
    * Ahora con respecto a cada tipo de dato, el que demoró mas tiempo fue "np.longdouble" con 10 segundos para las matrices de 5.000x5.0000, seguido del tipo "np.double" . El tipo "np.half" fue el tipo de xxxx que mas demoró en el inicio, tardando casi 0.1 s para matrices mas pequeñas de 2x2.
    En el caso de "np.longdouble", se ve un peak que llama la atención en las matrices de 40x40, esto se puede deber a los programas que estaban corriendo simultaneamente a pyhton.
+   
+   *
    ![desempeño caso 3- half](https://user-images.githubusercontent.com/69210578/90074293-e31b2b80-dcc8-11ea-84f1-f60c1e834f1a.png)
    ![desempeño caso 3- longdouble](https://user-images.githubusercontent.com/69210578/90074300-e7474900-dcc8-11ea-8092-fffb55c34215.png)
    ![desempeño caso 3-double](https://user-images.githubusercontent.com/69210578/90074314-ea423980-dcc8-11ea-9ebf-5c1468cb402f.png)

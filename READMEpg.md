@@ -76,8 +76,18 @@
 
 
 # DESEMPEÑO DE INVERSA:
-
-   # Caso 1: Numpy.Linalg.inv
+   * Tomando en cuenta que para los tres casos generales, evaluando de igual forma que las entregas anteriores, se llegó hasta la matriz 10.000X10.000 considerando la inversa de solo una matriz "A", pero para los gráficos específicos de cada tipo se corrió el programa hasta la matriz de  5.000X5.000, considerando dos matrices "A" y "B".
+   
+  # Caso 1: Numpy.Linalg.inv
+   * Para este caso el procesador trabajó a un 50% aprox, el nivel de uso de la CPU fue 59% aprox, El gráfico se presenta a continuación:
+   * ![caso 1](https://user-images.githubusercontent.com/69210578/90085603-5da67400-dce6-11ea-8f3d-51fb9ff215b4.png)
+   
+   * Gráfico desempeño para caso 1, utilizando las matrices random:
+   
+   
+   
+   
+   
    
    ![desempeño caso 1- single](https://user-images.githubusercontent.com/69210578/90073961-317bfa80-dcc8-11ea-9d6b-0380ae62115b.png)
    ![desempeño caso 1-double](https://user-images.githubusercontent.com/69210578/90073968-350f8180-dcc8-11ea-9116-8e4d789ea70f.png)
@@ -85,19 +95,42 @@
    
    
    
-   # Caso 2: Scipy.linalg.inv 
+  # Caso 2: Scipy.linalg.inv 
+  
+   * Este resultó mas rápido que el caso 1. El prosesador trabajó a un 74% aproximadamente, el nivel de uso de la CPU fue de 50% aprox. El gráfico se presenta a continuación:
+   * ![caso 2](https://user-images.githubusercontent.com/69210578/90085612-626b2800-dce6-11ea-9117-6af6f00708b9.png)
+  
+  
+   * Gráfico desempeño para caso 3, utilizando las matrices random:
+   
+   *  Con respecto a cada tipo de dato, el que demoró mas tiempo fue "np.longdouble" para matrices mas grandes de 5.000x5.000, "np.single" presenta una corrida que llama la atencion provocada posiblemente por los programas que corrian de forma paralela a python. "np.half" presenta menor tiempo para todas los tamaños de matrices.
    ![desempeño caso 2-single](https://user-images.githubusercontent.com/69210578/90074163-a0595380-dcc8-11ea-9579-c7ae655576ea.png)
    ![desempeño caso2-double](https://user-images.githubusercontent.com/69210578/90074166-a3ecda80-dcc8-11ea-8ac4-9373405a07d3.png)
    ![desempeño caso2-half](https://user-images.githubusercontent.com/69210578/90074173-a64f3480-dcc8-11ea-927e-4ca46b001ba5.png)
    ![desempeño caso 2- longdouble](https://user-images.githubusercontent.com/69210578/90074228-c252d600-dcc8-11ea-8e37-3ddebbc342cd.png)
 
-   # Caso 3: Scipy.linalg.inv usando overwrite=True
+  # Caso 3: Scipy.linalg.inv usando overwrite=True
+   
+   * Para este caso, overwrite=True demostró resultar una ganancia en cuanto a desempeño, superior a los dos casos anteriores. La carga del Disco osciló entre 80% y 90% llegando al peak de 100% por un tiempo prolongado. El nivel de uso de la CPU fue de aproximadamente 30%. El gráfico se presenta a continuación:
+   
+   * ![caso 3](https://user-images.githubusercontent.com/69210578/90085618-65feaf00-dce6-11ea-808b-29368ee51a31.png)
+
+   
+   * Gráfico desempeño para caso 3, utilizando las matrices random:
+   
+   
+   
+   * Ahora con respecto a cada tipo de dato, el que demoró mas tiempo fue "np.longdouble" con 10 segundos para las matrices de 5.000x5.0000, seguido del tipo "np.double" . El tipo "np.half" fue el tipo de xxxx que mas demoró en el inicio, tardando casi 0.1 s para matrices mas pequeñas de 2x2.
+   En el caso de "np.longdouble", se ve un peak que llama la atención en las matrices de 40x40, esto se puede deber a los programas que estaban corriendo simultaneamente a pyhton.
    ![desempeño caso 3- half](https://user-images.githubusercontent.com/69210578/90074293-e31b2b80-dcc8-11ea-84f1-f60c1e834f1a.png)
    ![desempeño caso 3- longdouble](https://user-images.githubusercontent.com/69210578/90074300-e7474900-dcc8-11ea-8092-fffb55c34215.png)
    ![desempeño caso 3-double](https://user-images.githubusercontent.com/69210578/90074314-ea423980-dcc8-11ea-9ebf-5c1468cb402f.png)
    ![desempeño caso 3-single](https://user-images.githubusercontent.com/69210578/90074319-ed3d2a00-dcc8-11ea-8b8f-091dd2c438a8.png)
 
    
-   * ¿Qué algoritmo de inversión cree que utiliza cada método? - Se utiliza el algoritmo de Matriz Laplaciana, este es un algotires un algoritmo con complejidad factorial, lo cual hace que resolver el sistema mediante este método no sea la mejor opción, debido a su demora.
+   * ¿Qué algoritmo de inversión cree que utiliza cada método? - Se utiliza el algoritmo de Laplacian Matrix, este es un algoritmo con complejidad factorial, lo cual hace que resolver el sistema mediante este método no sea la mejor opción, debido a su demora. Matriz donde las columnas representan a las aristas del grafo y las filas a los vértices. El elemento (i,j) representa que la arista i incide en el vértice j. La diagonal esta compuesta por 2, y las diagonales adyacentes superior e inferior a la central estan compuestas por -1.
+   * Además se utiliza la Invertible Matrix, para el caso 1 se utiliza la libreria de Numpy y en el caso 2 y 3 se utiliza la libreria Scipy. En ambos casos se resuelve un sistema lineal de ecuaciones.    
    
-   * ¿Cómo incide el paralelismo y la estructura de caché de su procesador en el desempeño de cada caso?
+   * ¿Cómo incide el paralelismo y la estructura de caché de su procesador en el desempeño de cada caso?- El paralelismo es una función que realiza el procesador para ejecutar varias tareas al mismo tiempo, realizando varios cálculos simultáneamente (paralelismo de datos). Los sistemas informáticos suelen hacer uso de cachés,  ubicados cerca del procesador que almacenan las copias temporales de los valores de la memoria. Como se mencionó anteriormente el caso que presentó menos desempeño utilizando otras aplicaciones o programas mientras se corria el código fue el caso 1. 
+   
+   

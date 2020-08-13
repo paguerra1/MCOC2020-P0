@@ -90,8 +90,7 @@
    ![desempeño general caso 1](https://user-images.githubusercontent.com/69210578/90087455-cd1e6280-dcea-11ea-9226-d5a0dac57296.png)
    
    * Para este caso, no se logró ejecutar "np.half" ni "np.longdouble". El procesador trabajó a un 50% aprox, el nivel de uso de la CPU fue 59% aprox, El gráfico se presenta a continuación:
-   * ![caso 1](https://user-images.githubusercontent.com/69210578/90085603-5da67400-dce6-11ea-8f3d-51fb9ff215b4.png)
-
+   * ![caso 1](https://user-images.githubusercontent.com/69210578/90088562-38693400-dced-11ea-98b8-3123bac08366.png)
    
    
    * Para las matrices mas pequeñas el tipo de dato "np.double" tardó mas, y ambos con un tiempo de 10 segundos para las matrices de 5.000x5.000, usando 1GB de memoria. "np.single" tiene dos peaks de tiempo para las matrices de 10x10 y 20x20
@@ -108,8 +107,7 @@
    ![desempeño general caso 2](https://user-images.githubusercontent.com/69210578/90087451-c8f24500-dcea-11ea-9f3b-f71273108f89.png)
    
    * Este resultó mas rápido que el caso 1. El prosesador trabajó a un 74% aproximadamente, el nivel de uso de la CPU fue de 50% aprox. El gráfico se presenta a continuación:
-   * ![caso 2](https://user-images.githubusercontent.com/69210578/90085612-626b2800-dce6-11ea-9117-6af6f00708b9.png)
-  
+   * ![caso 2](https://user-images.githubusercontent.com/69210578/90088567-3b642480-dced-11ea-931a-d68348ba3be1.png)
    
    *  Con respecto a cada tipo de dato, el que demoró mas tiempo fue "np.longdouble" para matrices mas grandes de 5.000x5.000, "np.single" presenta una corrida que llama la atencion provocada posiblemente por los programas que corrian de forma paralela a python. "np.half" presenta menor tiempo para todas los tamaños de matrices.
    
@@ -127,7 +125,7 @@
    
    * Para este caso, overwrite=True demostró resultar una ganancia en cuanto a desempeño, superior a los dos casos anteriores. La carga del Disco osciló entre 80% y 90% llegando al peak de 100% por un tiempo prolongado. El nivel de uso de la CPU fue de aproximadamente 30%. El gráfico se presenta a continuación:
    
-   * ![caso 3](https://user-images.githubusercontent.com/69210578/90085618-65feaf00-dce6-11ea-808b-29368ee51a31.png)
+   * ![caso 3](https://user-images.githubusercontent.com/69210578/90088573-3ef7ab80-dced-11ea-9caa-5d24bba7b12d.png)
    
    * Ahora con respecto a cada tipo de dato, el que demoró mas tiempo fue "np.longdouble" con 10 segundos para las matrices de 5.000x5.0000, seguido del tipo "np.double" . El tipo "np.half" fue el tipo de xxxx que mas demoró en el inicio, tardando casi 0.1 s para matrices mas pequeñas de 2x2.
    En el caso de "np.longdouble", se ve un peak que llama la atención en las matrices de 40x40, esto se puede deber a los programas que estaban corriendo simultaneamente a pyhton.

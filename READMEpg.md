@@ -142,4 +142,7 @@
    
    * ¿Cómo incide el paralelismo y la estructura de caché de su procesador en el desempeño de cada caso?- El paralelismo es una función que realiza el procesador para ejecutar varias tareas al mismo tiempo, realizando varios cálculos simultáneamente (paralelismo de datos). Los sistemas informáticos suelen hacer uso de cachés,  ubicados cerca del procesador que almacenan las copias temporales de los valores de la memoria. Como se mencionó anteriormente el caso que presentó menos desempeño utilizando otras aplicaciones o programas mientras se corria el código fue el caso 1. 
    
-   
+ # Desempeño Ax=b:
+ ![desempeño Ax=B](https://user-images.githubusercontent.com/69210578/90299817-8ef97e00-de65-11ea-8952-477145346436.png)
+
+ * Se logra apreciar un incremento exponencial del tiempo a medida que aumenta el tamaño de matrices. Pero desde el inico al fin, se demuestra que A_inv_npSolve tiene un mejor rendimiento. Para las matrices de 10.000x10.000 se demoró aproximadamente 20 segundos, mientras que A_invB_inv estuvo cercano a 1 minuto.

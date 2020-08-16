@@ -149,5 +149,7 @@
  
  # Desempeño Ax=b (parte 2):
  
- * ![Gráfico desempeño Ax=B (parte 2)](https://user-images.githubusercontent.com/69210578/90325935-f0961700-df4f-11ea-9053-03a2b277bf50.png)
+ * ![PAULINA GUERRA_Gráfico Ax=b(parte 2)](https://user-images.githubusercontent.com/69210578/90343112-9c387900-dfdb-11ea-9d73-6d0a08aa321f.png)
+ 
+
 

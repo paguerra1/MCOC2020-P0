@@ -78,7 +78,7 @@ for N in Nm:
         A=laplaciana(N)
         B=np.ones(N)
         t1=perf_counter()
-        A_invB2=linalg.solve(A,B,sym_pos=True)
+        A_invB2=linalg.solve(A,B,assume_a="sym")
         t2=perf_counter()      
         dt=t2-t1
             

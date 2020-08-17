@@ -18,5 +18,5 @@
   * 5º spSolve
   * 6º Invertir y multiplicar
   
-* El orden de rendimiento por función coincide con el del gráfico del profesor, pero ese muestra menos tiempo en la ejecución. Para la función "A_invB_inv" se demoró 20 seg. aproximadamente para las matrices de 10.000x10.000 mientras que en mi computador esta misma función demoró casi un minuto para el mismo tamaño de matrices.
+* El orden de rendimiento por función coincide con el del gráfico del profesor, pero ese muestra menos tiempo en la ejecución. Para la función "A_invB_inv" se demoró 20 seg. aproximadamente para las matrices de 10.000x10.000 mientras que en mi computador esta misma función demoró casi un minuto para el mismo tamaño de matrices. Lo que previamente se ha explicado por la diferencia de procesadores, memoria RAM y paralelismo en cada ordenador, siendo el computador del profesor mas eficiente que el mio.
 * Ambos gráficos muestran que cuando se asume que la matriz es simétrica, esta función demora mas de lo habitual justo al comenzar para las matrices mas pequeñas de 2x2 o 4x4 (función representada en rojo)

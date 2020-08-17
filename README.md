@@ -153,7 +153,7 @@
 # Desempeño Ax=b (Parte 2)
 ![PAULINA GUERRA_Gráfico Ax=b(parte 2)](https://user-images.githubusercontent.com/69210578/90343112-9c387900-dfdb-11ea-9d73-6d0a08aa321f.png)
 * Mejor desempeño:
-  * Según lo mostrado en el gráfico, se pueden analizar distintas aristas. En primer lugar se ve como en un comienzo, para las matrices mas pequeñas hasta las matrices de 50x50 el que se demora menos es "A_invB_npSolve" de Numpy, superando por poco 0.1 ms. Pero desde las matrices de 50x50 hasta las matrices de 10.000x10.000 es "A_invB_spSolve_pos_overwrite", solver de scipy que resuelve de forma mas rápida Ax=b,demorándose 8seg aprox. para las matrices de 10.000x10.000.  Esto demuestra que cuando se sabe que la matriz es definida positiva, el algoritmo es mas eficiente, para esto se escribe: "assume_a='pos'". 
+  * Según lo mostrado en el gráfico, se pueden analizar distintas aristas. En primer lugar se ve como en un comienzo, para las matrices mas pequeñas hasta las matrices de 50x50 el que muestra un mejor desempeño es "A_invB_npSolve" de Numpy, superando por poco 0.1 ms. Pero desde las matrices de 50x50 hasta las matrices de 10.000x10.000 es "A_invB_spSolve_pos_overwrite", solver de scipy que resuelve de forma mas rápida Ax=b,demorándose 8seg aprox. para las matrices de 10.000x10.000.  Esto demuestra que cuando se sabe que la matriz es definida positiva, el algoritmo es mas eficiente, para esto se escribe: "assume_a='pos'". 
   * Mayor es la eficiencia cuando se agrega "overwrite_a" donde permite sobre escribir los datos. Eficiencia ya demostrada también en la entrega anterior.
   
 * Peor desempeño:

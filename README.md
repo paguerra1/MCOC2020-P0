@@ -260,7 +260,7 @@
 
 
 
-# Código para matrices dispersas:
+* Código para matrices dispersas:
 ```ruby
 def laplaciana_dispersa(N,t=np.double):
     A=lil_matrix((N,N))

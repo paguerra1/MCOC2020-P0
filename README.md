@@ -245,6 +245,8 @@
 # Código de Ensamblaje de Matrices Laplacianas
 
 * Código para matrices llenas:
+
+```ruby
  def laplaciana_llena(N,t=np.double):
     A=np.identity(N,t)*2
     for i in range(N):
@@ -254,11 +256,12 @@
             if i-1==j:
                 A[i,j]=-1
     return A 
-                    
+```              
 
 
 
 # Código para matrices dispersas:
+```ruby
 def laplaciana_dispersa(N,t=np.double):
     A=lil_matrix((N,N))
     for i in range(N):
@@ -270,3 +273,4 @@ def laplaciana_dispersa(N,t=np.double):
             if i-1==j:
                 A[i,j]=-1
     return csc_matrix(A) 
+ ```

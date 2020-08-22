@@ -177,6 +177,7 @@
 # Entrega 7: Matrices Dispersas y Complejidad Computacional
 * Tomar en cuenta que se realizaron 4 corridas para tamaños de matrices crecientes hasta 8.192 por tiempo de ejecución
 # Complejidad Algoritmica de MATMUL
+![Complejidad MATMUL_Llena](https://user-images.githubusercontent.com/69210578/90947875-50d10100-e407-11ea-88f8-4718148f71b3.png)  ![Complejidad MATMUL_Dispersa](https://user-images.githubusercontent.com/69210578/90947882-54fd1e80-e407-11ea-8a11-9a77d72f3437.png)
 
 
 
@@ -199,7 +200,8 @@
 
 # Complejidad Algoritmica de SOLVE
 
-
+![Complejidad SOLVE_Dispersa](https://user-images.githubusercontent.com/69210578/90947877-529ac480-e407-11ea-9ee2-b588b531961e.png)
+![Complejidad SOLVE_Llena](https://user-images.githubusercontent.com/69210578/90947878-53335b00-e407-11ea-842d-e604e11976b0.png)
 
 * COMENTAR DIFERENCIAS ENTRE LOS ALGORITMOS DE MATRICES LLENAS Y DISPERSAS
    * Se observa que el tiempo de solucion para la matriz dispersa se muestra relativamente constante en el tiempo entre [0.1ms, 10ms] a excepcion de una de las corridas que presentó una leve discontinuidad para la matriz 500, debido posiblemente a programas que se abrieron de forma paralela. La matriz llena presenta discontinuidades al comienzo hasta la matriz N=50 aprox. En general el tiempo esta dentro del rango de [0.1ms,10ses]
@@ -220,7 +222,8 @@
 
 # Complejidad Algoritmica de INV
 
-
+![Complejidad INV_Dispersa](https://user-images.githubusercontent.com/69210578/90947880-54648800-e407-11ea-823b-886404e5b91f.png)
+![Complejidad INV_Llena](https://user-images.githubusercontent.com/69210578/90947881-54648800-e407-11ea-9e72-876b7f084f5b.png)
 
 * COMENTAR DIFERENCIAS ENTRE LOS ALGORITMOS DE MATRICES LLENAS Y DISPERSAS
    * Tiempo de ensamblado es similar en ambos casos (max 1 min aprox), aunque la matriz dispersa tarde un poco mas en un comienzo.
@@ -242,7 +245,7 @@
 # Código de Ensamblaje de Matrices Laplacianas
 
 * Código para matrices llenas:
-''' def laplaciana_llena(N,t=np.double):
+ def laplaciana_llena(N,t=np.double):
     A=np.identity(N,t)*2
     for i in range(N):
         for j in range (N):
@@ -250,14 +253,13 @@
                 A[i,j]=-1
             if i-1==j:
                 A[i,j]=-1
-    return A '''
+    return A 
                     
-``
 
 
 
-* Código para matrices dispersas:
-""" def laplaciana_dispersa(N,t=np.double):
+# Código para matrices dispersas:
+def laplaciana_dispersa(N,t=np.double):
     A=lil_matrix((N,N))
     for i in range(N):
         for j in range (N):
@@ -267,4 +269,4 @@
                 A[i,j]=-1
             if i-1==j:
                 A[i,j]=-1
-    return csc_matrix(A) """
+    return csc_matrix(A) 

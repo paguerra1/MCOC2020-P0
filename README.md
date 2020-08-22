@@ -247,6 +247,10 @@
 * Código para matrices llenas:
 
 ```ruby
+from scipy.sparse import lil_matrix, csc_matrix
+from scipy.sparse.linalg import spsolve, inv
+import numpy as np
+
  def laplaciana_llena(N,t=np.double):
     A=np.identity(N,t)*2
     for i in range(N):
@@ -257,7 +261,7 @@
                 A[i,j]=-1
     return A 
 ```              
-
+   
 
 
 * Código para matrices dispersas:
@@ -274,3 +278,6 @@ def laplaciana_dispersa(N,t=np.double):
                 A[i,j]=-1
     return csc_matrix(A) 
  ```
+* En el primer código aprovecha una estructura por el uso de las librerias respectivas, de numpy y scipy. Su comodidad para trabajar presenta meyores beneficios que el código de matrices dispersas.
+* En ambos casos se recorre una lista de tamaño N y luego de revisar se asigna el valor correspondiente.
+* El segundo código si bien es mas extenso, no muestra grandes diferencias. El ```csr_matrix``` demostró menor tiempo pero no necesariamente fue mas optimo al momento de ensamblar la matriz.
